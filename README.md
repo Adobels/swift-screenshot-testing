@@ -20,3 +20,20 @@ Task {
 An important part of development will focus on naming strategies and file hierarchy, for example, choosing between a flat structure or a tree structure that reflects test paths.
 
 The first phase of development will focus on UIKit, with SwiftUI support added later.
+
+Code to capture an image during UITest : 
+```swift
+    @MainActor
+    func testExample() throws {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        let snap = app.screenshot()
+        let att = XCTAttachment(image: snap.image)
+        att.name = "/Users/toto/Desktop/pocDefaultValues/pocDefaultValues/ViewController.swift"
+        att.lifetime = .keepAlways
+        self.add(att)
+    }
+```
+
+extract the screenshot from xcresult with xcresulttool or xcparse
