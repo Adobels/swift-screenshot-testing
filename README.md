@@ -36,4 +36,4 @@ Code to capture an image during UITest :
     }
 ```
 
-extract the screenshot from xcresult with xcresulttool or xcparse
+Extract the screenshot from an .xcresult file using xcresulttool, xcparse, or the Foundation framework’s FileManager.
